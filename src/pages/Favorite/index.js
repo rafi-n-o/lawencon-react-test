@@ -27,7 +27,7 @@ const Favorite = () => {
 
   return (
     <div className="row" style={styles.container}>
-      {movies.map((value, index) => {
+      {movies?.map((value, index) => {
         return (
           <div className="col s6 m4 l3" style={styles.movie} key={index}>
             <div className="card">

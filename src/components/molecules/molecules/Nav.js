@@ -10,7 +10,7 @@ const Nav = () => {
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="/Favorite">Favorites</a>
+                  <a href="/favorite">Favorites</a>
                 </li>
               </ul>
             </div>
