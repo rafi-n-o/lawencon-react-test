@@ -47,10 +47,33 @@ const MovieDetail = () => {
     );
   }
 
+  const addToFavorite = () => {
+    alert("berhasil ditambahkan ke favorite");
+    if (!JSON.parse(localStorage.getItem("favorites"))) {
+      const arr = [];
+      localStorage.setItem("favorites", JSON.stringify(arr));
+      arr.push({ Poster: movie.Poster });
+    } else {
+      const arr = JSON.parse(localStorage.getItem("favorites"));
+      arr.push({ Poster: movie.Poster });
+      localStorage.setItem("favorites", JSON.stringify(arr));
+    }
+  };
+
   return (
     <div className="container">
       <Gap height={10} />
       <div className="row">
+        <div style={{ display: "flex", justifyContent: "end" }}>
+          <button
+            className="btn-flat"
+            onClick={() => {
+              addToFavorite();
+            }}
+          >
+            <i className="material-icons">favorite</i>
+          </button>
+        </div>
         <div className="col s12 m4">
           <img src={`${movie.Poster}`} className="responsive-img" />
         </div>

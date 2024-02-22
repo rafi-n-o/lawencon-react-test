@@ -26,4 +26,8 @@ const getMovie = (id) => {
   });
 };
 
-export { getMovies, getMovie };
+const getFavorites = () => {
+  return localStorage.getItem("favorites");
+};
+
+export { getMovies, getMovie, getFavorites };

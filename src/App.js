@@ -4,6 +4,7 @@ import MainApp from "./layouts/MainApp";
 import Movie from "./pages/Movie";
 import MovieDetail from "./pages/Movie/Detail";
 import store from "./redux/store";
+import Favorite from "./pages/Favorite";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="" element={<MainApp />}>
             <Route index element={<Movie />} />
             <Route path=":id" element={<MovieDetail />} />
+            <Route path="favorite" element={<Favorite />} />
           </Route>
         </Routes>
       </BrowserRouter>
